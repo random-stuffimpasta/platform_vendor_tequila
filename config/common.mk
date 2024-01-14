@@ -116,6 +116,36 @@ SYSTEMUI_OPTIMIZE_JAVA ?= true
 PRODUCT_PACKAGES += \
     ThemePicker
 
+# Fonts
+PRODUCT_PACKAGES += \
+    FontDMSansOverlay \
+    FontHarmonyOSSansOverlay \
+    FontInterOverlay \
+    FontManropeOverlay \
+    FontQuicksandOverlay \
+    FontSwitzerOverlay
+
+# Icon packs
+PRODUCT_PACKAGES += \
+    IconPackCircularAndroidOverlay \
+    IconPackCircularSettingsOverlay \
+    IconPackCircularSystemUIOverlay \
+    IconPackVictorAndroidOverlay \
+    IconPackVictorSettingsOverlay \
+    IconPackVictorSystemUIOverlay \
+    IconPackSamAndroidOverlay \
+    IconPackSamSettingsOverlay \
+    IconPackSamSystemUIOverlay \
+    IconPackKaiAndroidOverlay \
+    IconPackKaiSettingsOverlay \
+    IconPackKaiSystemUIOverlay \
+    IconPackFilledAndroidOverlay \
+    IconPackFilledSettingsOverlay \
+    IconPackFilledSystemUIOverlay \
+    IconPackRoundedAndroidOverlay \
+    IconPackRoundedSettingsOverlay \
+    IconPackRoundedSystemUIOverlay
+
 # Disable RescueParty due to high risk of data loss
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.sys.disable_rescue=true
@@ -186,6 +216,7 @@ PRODUCT_PACKAGES += \
     Updater
 endif
 
+$(call inherit-product, vendor/tequila/config/fonts.mk)
 $(call inherit-product, vendor/tequila/config/version.mk)
 $(call inherit-product, vendor/google/gms/config.mk)
 $(call inherit-product, vendor/google/pixel/config.mk)
